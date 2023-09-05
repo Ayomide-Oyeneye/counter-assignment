@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-
-
+import { Hash } from 'react-feather';
+import { ChevronUp } from 'react-feather';
+import { ChevronsUp } from 'react-feather';
+import { ChevronDown } from 'react-feather';
+import { ChevronsDown } from 'react-feather';
+import {RotateCcw } from 'react-feather';
 function App() {
   const [count, setCount] = useState(0)
   const [me,  setMe]=useState(0)
@@ -17,26 +21,26 @@ function App() {
         </a>
         <div className='btn' >
         <button onClick={() => setCount((me) => me + 1)}>
-          <img width="30" height="30" src="https://img.icons8.com/ios/30/collapse-arrow--v2.png" alt="collapse-arrow--v2"/>{" "}
+        < ChevronUp />{" "}
           </button>
           <button onClick={() => setCount((me) => me + 10)}>
-          <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/double-up--v1.png" alt="double-up--v1"/>{" "}
+          < ChevronsUp />{" "}
           </button>
           <button onClick={() => setCount((me) => (me = 0))}>
-          <img width="30" height="30" src="https://img.icons8.com/ios/30/recurring-appointment.png" alt="recurring-appointment"/>
+          < RotateCcw />
           </button>
           <button
             onClick={() =>
               setCount((count) => (count = Math.floor(Math.random() * 100)))
             }
           >
-            <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/hashtag.png" alt="hashtag"/>{" "}
+            <Hash />{" "}
           </button>
           <button onClick={() => setCount((me) => me - 10)}>
-          <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/double-down--v1.png" alt="double-down--v1"/>
+          < ChevronsDown />
           </button>
           <button onClick={() => setCount((me) => me - 1)}>
-          <img width="30" height="30" src="https://img.icons8.com/sf-regular-filled/30/expand-arrow.png" alt="expand-arrow"/>{" "}
+          < ChevronDown />{" "}
           </button>
         </div>
       </div>
