@@ -10,12 +10,6 @@ function App() {
   const [count, setCount] = useState(0)
   const [me,  setMe]=useState(0)
   const [durrent,  serDurrent]=useState('Current value:')
-  function textChange(){
-    serDurrent('u inc')
-  }
-  function uptet(){
-    setCount((me) => me + 1)
-  }
   return (
     <>
       <div
